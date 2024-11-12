@@ -1,0 +1,8 @@
+{
+    "name": "razor-admin",
+    "scripts": {
+        "api": "cd ./server && bun run dev",
+        "admin": "cd ./admin && bun run dev  --port 3030",
+        "dev": "concurrently 'bun run api' 'bun run admin'"
+    }
+}
