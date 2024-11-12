@@ -1,7 +1,29 @@
 import { Elysia } from "elysia";
+import utils from "./utils";
+import pc from "picocolors";
+import cors from "@elysiajs/cors"
+import swagger from "@elysiajs/swagger"
+import { allowedOrigins } from './configs/origin.config';
+import {swaggerOps} from './configs/swagger.config'
 
-const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
+
+import { connectDb } from "./configs/db.config";
+
+// mongoose setup
+// connectDb();
+
+// server setup
+export const app = new Elysia();
+
+app
+  .use(cors({ origin: allowedOrigins }))
+  .use(swagger(swaggerOps))
+  .use(utils)
+  .get("/", () => "🦊 Server is up and running")
+  .listen(Bun.env.PORT || 3002);
+
 
 console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+  `🦊 Elysia is running at ` +
+  pc.yellow(`${app.server?.hostname}:${app.server?.port}`)
 );
