@@ -1,7 +1,5 @@
-import { Elysia } from 'elysia';
-import cronTest from './jobs/cronTest.job'
+import Elysia from "elysia";
 
 const utils = new Elysia()
-    .use(cronTest)
 
 export default utils

@@ -1,3 +1,5 @@
-export const  swaggerOps = {
-    path: "/docs"
+const swaggerConfig = {
+    path: "/docs",
 }
+
+export default swaggerConfig
