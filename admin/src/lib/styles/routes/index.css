@@ -1,0 +1,61 @@
+.auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .authWrap {
+        width: 300px;
+
+        .authIcon {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .authInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .formAction {
+                margin-top: 15px;
+
+                button {
+                    width: 100%;
+                }
+            }
+
+            .formWrap{
+                display: flex;
+                gap:10px;
+            }
+        }
+
+        .authBaseAction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            opacity: .7;
+
+            a {
+                display: flex;
+                align-items: center;
+            gap: 6px;
+            justify-content: center;
+            }
+
+            p {
+                font-size: .9rem;
+            }
+        }
+    }
+}
